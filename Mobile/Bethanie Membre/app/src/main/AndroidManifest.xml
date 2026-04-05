@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bethaniemembre">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BethanieMembre">
+        <activity android:name=".InfoLienActivity"></activity>
+        <activity android:name=".VocLiensActivity" />
+        <activity android:name=".NewLiensActivity" />
+        <activity android:name=".InfoHistoriqueActivity" />
+        <activity android:name=".UpdateAccountActivity" />
+        <activity android:name=".ConfirmDeleteMembreActivity" />
+        <activity android:name=".ConfirmReinscrireMembreActivity" />
+        <activity android:name=".InfoMembreDesinscritActivity" />
+        <activity android:name=".MembresDesinscritActivity" />
+        <activity android:name=".ConfirmDesinscrireMembreActivity" />
+        <activity android:name=".UpdateLocalisationMembreActivity" />
+        <activity android:name=".UpdateCoordonatesInfoMembreActivity" />
+        <activity android:name=".UpdateClassicInfoMembreActivity" />
+        <activity android:name=".InfoMembreInscritActivity" />
+        <activity android:name=".NewMembreActivity" />
+        <activity android:name=".MembreActivity" />
+        <activity android:name=".HistoriqueListActivity" />
+        <activity android:name=".InfoAccountActivity" />
+        <activity android:name=".ConfirmDeleteAccountActivity" />
+        <activity android:name=".UsersListActivity" />
+        <activity android:name=".MainMenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewPasswordActivity" />
+        <activity android:name=".PasswordForgotte" />
+        <activity android:name=".InscriptionActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>
