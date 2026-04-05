@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/info_account_desinscrit_intro" />
+
+    <TextView
+        android:id="@+id/info_account_desinscrit_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plus d'informations sur "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@id/info_contact_0"
+        android:gravity="center_horizontal"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/info_classique_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Date de naissance : \nAdresse e-mail :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/info_contact_0"
+        app:layout_constraintTop_toBottomOf="@id/info_account_desinscrit_intro"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintBottom_toTopOf="@id/liens_0"/>
+
+    <TextView
+        android:id="@+id/info_contact_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:text="Téléphone portable personnel : \nTéléphone fixe personnel : \nTéléphone fax personnel : \nTéléphone portable professionnel : \nTéléphone fixe professionnel : \nTéléphone fax professionnel : "
+        app:layout_constraintStart_toEndOf="@id/info_classique_0"
+        app:layout_constraintEnd_toStartOf="@id/info_localisation_0"
+        app:layout_constraintTop_toBottomOf="@id/info_account_desinscrit_intro"
+        app:layout_constraintBottom_toTopOf="@id/liens_0"/>
+
+    <TextView
+        android:id="@+id/info_localisation_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adresse : \nComplément d'adresse : \nCode postal : \nVille : \nNuméro de boîte ou d'appartement : "
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintTop_toBottomOf="@id/info_account_desinscrit_intro"
+        app:layout_constraintBottom_toTopOf="@id/liens_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/info_contact_0"/>
+
+    <TextView
+        android:id="@+id/liens_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liens : "
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_contact_0"
+        app:layout_constraintBottom_toTopOf="@id/buttonDeleteM"/>
+
+    <Button
+        android:id="@+id/buttonReinscrire"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Réinscrire ce membre"
+        android:textColor="@color/blue"
+        android:backgroundTint="@color/yellow"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintTop_toBottomOf="@id/liens_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDeleteM"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonDeleteM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Supprimer ce membre"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintTop_toBottomOf="@id/liens_0"
+        app:layout_constraintEnd_toStartOf="@id/buttonretourdesinscrit"
+        app:layout_constraintStart_toEndOf="@id/buttonReinscrire"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonretourdesinscrit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/liens_0"
+        app:layout_constraintStart_toEndOf="@id/buttonDeleteM"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

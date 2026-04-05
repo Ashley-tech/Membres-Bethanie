@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewLiensActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:gravity="center_horizontal"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@id/lien_attribution_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lien_attribution_title"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:gravity="center_horizontal"
+        android:text="Association/Dissociation des liens au membre "
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/lien_attribution_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/lien_attribution_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_horizontal"
+        android:text="Pour commencer, entrer le nom d'un lien correctement pour pouvoir l'associer ou le dissocier à ce membre.\nMerci de l'écrire en respectant la casse du lien par rapport à celui écrit dans la rubrique du vocabulaire des liens."
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/editTextLienAssocier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lien_attribution_title" />
+
+    <EditText
+        android:id="@+id/editTextLienAssocier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:ems="10"
+        android:hint="Lien à associer *:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/editTextLienDissocier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lien_attribution_intro" />
+
+    <EditText
+        android:id="@+id/editTextLienDissocier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:ems="10"
+        android:hint="Lien à dissocier *:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/lien_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLienAssocier" />
+
+    <TextView
+        android:id="@+id/lien_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Liens : "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonValider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLienDissocier" />
+
+    <Button
+        android:id="@+id/buttonValider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Valider"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVocLiens"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVocLiens"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Glossaire des liens"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/buttonretourlien"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonretourlien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Retour"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

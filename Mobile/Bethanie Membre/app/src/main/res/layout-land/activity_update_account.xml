@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:gravity="center_horizontal"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/update_account_intro"/>
+
+    <TextView
+        android:id="@+id/update_account_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modification des informations de votre compte"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@id/editTextLogin_0" />
+
+    <EditText
+        android:id="@+id/editTextLogin_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Login *:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPassword_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_account_intro"
+        app:layout_constraintBottom_toTopOf="@id/editTextPassword2_0"/>
+
+    <EditText
+        android:id="@+id/editTextPassword_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nouveau mot de passe *:"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_account_intro"
+        app:layout_constraintBottom_toTopOf="@id/Profil_Type_0"
+        app:layout_constraintStart_toEndOf="@id/editTextLogin_0"/>
+
+    <EditText
+        android:id="@+id/editTextPassword2_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Reconfirmation du mot de passe *:"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUpdateAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin_0"
+        app:layout_constraintEnd_toStartOf="@id/Profil_Type_0"/>
+
+    <Spinner
+        android:id="@+id/Profil_Type_0"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:entries="@array/type_profil"
+        app:layout_constraintBottom_toTopOf="@+id/buttonretourUpdateAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editTextPassword2_0"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword_0" />
+
+    <Button
+        android:id="@+id/buttonUpdateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Valider les modifications"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonretourUpdateAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword2_0"/>
+
+    <Button
+        android:id="@+id/buttonretourUpdateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:textColor="@color/blue"
+        android:backgroundTint="@color/yellow"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintStart_toEndOf="@id/buttonUpdateAccount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Profil_Type_0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

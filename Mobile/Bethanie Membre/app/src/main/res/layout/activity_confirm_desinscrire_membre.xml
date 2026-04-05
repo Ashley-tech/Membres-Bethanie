@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmDesinscrireMembreActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/desinscrireMembre_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/desinscrireMembre_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@id/buttonDesinscrire"/>
+
+    <Button
+        android:id="@+id/buttonDesinscrire"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Oui"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDesinscrireNo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDesinscrireNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Non"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintStart_toEndOf="@id/buttonDesinscrire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

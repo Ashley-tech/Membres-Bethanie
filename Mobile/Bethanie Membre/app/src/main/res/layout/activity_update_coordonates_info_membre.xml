@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateCoordonatesInfoMembreActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:textSize="30dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/updatecoordo_intro" />
+
+    <TextView
+        android:id="@+id/updatecoordo_intro"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Modification des coordonnées de contact du membre "
+        android:textSize="15dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextPortPerso" />
+
+    <EditText
+        android:id="@+id/editTextPortPerso"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Téléphone portable personnel :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updatecoordo_intro"
+        app:layout_constraintBottom_toTopOf="@id/editTextFixePerso" />
+
+    <EditText
+        android:id="@+id/editTextFixePerso"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Téléphone fixe personnel :"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@id/editTextFaxPerso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPortPerso" />
+
+    <EditText
+        android:id="@+id/editTextFaxPerso"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Téléphone fax personnel :"
+        app:layout_constraintTop_toBottomOf="@id/editTextFixePerso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextPortPro"/>
+
+    <EditText
+        android:id="@+id/editTextPortPro"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Téléphone portable professionnel :"
+        app:layout_constraintTop_toBottomOf="@id/editTextFaxPerso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@id/editTextFixePro" />
+
+    <EditText
+        android:id="@+id/editTextFixePro"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/editTextPortPro"
+        android:hint="Téléphone fixe professionnel :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextFaxPro" />
+
+    <EditText
+        android:id="@+id/editTextFaxPro"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Téléphone fax professionnel :"
+        app:layout_constraintTop_toBottomOf="@id/editTextFixePro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonUpdatecoordonnes" />
+
+    <Button
+        android:id="@+id/buttonUpdatecoordonnes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Modifier ces coordonnées de contact"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextFaxPro"
+        app:layout_constraintBottom_toTopOf="@id/buttonretourcoordonnes" />
+
+    <Button
+        android:id="@+id/buttonretourcoordonnes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/buttonUpdatecoordonnes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

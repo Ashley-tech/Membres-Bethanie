@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MembreActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textSize="40dp"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/membre_intro" />
+
+    <TextView
+        android:id="@+id/membre_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Liste des membres inscrits"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/membre_list"/>
+
+    <ListView
+        android:id="@+id/membre_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/buttonmembren"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/membre_intro"></ListView>
+
+    <Button
+        android:id="@+id/buttonmembren"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Consulter la liste des membres désinscrits"
+        android:textColor="@color/blue"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/membre_list"
+        app:layout_constraintBottom_toTopOf="@id/buttonnewmembre"/>
+
+    <Button
+        android:id="@+id/buttonnewmembre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nouveau membre"
+        android:textColor="@color/blue"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/buttonmembren"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonretourme"/>
+
+    <Button
+        android:id="@+id/buttonretourme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/buttonnewmembre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

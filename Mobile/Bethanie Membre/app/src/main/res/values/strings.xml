@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Béthanie Membre</string>
+    <string-array name="type_profil">
+        <item>Profil* :</item>
+        <item value="Administrateur">Administrateur</item>
+        <item value="Lecture seule">Lecture seule</item>
+    </string-array>
+    <string-array name="sexe">
+        <item>Sexe* :</item>
+        <item value="M">M.</item>
+        <item value="F">Mme</item>
+    </string-array>
+</resources>

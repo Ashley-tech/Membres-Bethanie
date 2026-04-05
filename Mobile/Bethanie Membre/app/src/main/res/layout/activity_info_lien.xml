@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoLienActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lien_text"/>
+
+    <TextView
+        android:id="@+id/lien_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plus d'informations sur le lien '"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lien_def"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/lien_def"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Définition : "
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lien_text"
+        app:layout_constraintBottom_toTopOf="@id/sexe_particulier"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/sexe_particulier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexe particulier : "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonretourlinfo"
+        app:layout_constraintTop_toBottomOf="@id/lien_def"/>
+
+    <Button
+        android:id="@+id/buttonretourlinfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Retour"
+        android:textColor="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/sexe_particulier"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

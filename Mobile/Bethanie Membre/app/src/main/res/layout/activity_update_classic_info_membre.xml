@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateClassicInfoMembreActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:gravity="center_horizontal"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/update_classic_info_membre_intro" />
+
+    <TextView
+        android:id="@+id/update_classic_info_membre_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modification du membre "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerSexe2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerSexe2"
+        android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:entries="@array/sexe"
+        app:layout_constraintBottom_toTopOf="@id/editTextPersonLN2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_classic_info_membre_intro" />
+
+    <EditText
+        android:id="@+id/editTextPersonLN2"
+        android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nom* :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextPersonFN2"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSexe2"/>
+
+    <EditText
+        android:id="@+id/editTextPersonFN2"
+        android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Prénom* :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPersonLN2"
+        app:layout_constraintBottom_toTopOf="@id/editTextNaissance2"/>
+
+    <EditText
+        android:id="@+id/editTextNaissance2"
+        android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Date de naissance* : (Format AAAA-MM-DD)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPersonFN2"
+        app:layout_constraintBottom_toTopOf="@id/editTextEmailAddress2"/>
+
+    <EditText
+        android:id="@+id/editTextEmailAddress2"
+        android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="E-mail* :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNaissance2"
+        app:layout_constraintBottom_toTopOf="@id/buttonupdateclassicinfo"/>
+
+    <Button
+        android:id="@+id/buttonupdateclassicinfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Modifier ces informations classiques"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmailAddress2"
+        app:layout_constraintBottom_toTopOf="@id/buttonretourupdateclassicinfo"/>
+
+    <Button
+        android:id="@+id/buttonretourupdateclassicinfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Retour"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonupdateclassicinfo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

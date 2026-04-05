@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Login"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/Login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="17dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Login"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="17dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonC"
+        app:layout_constraintTop_toBottomOf="@id/Login"
+        tools:layout_editor_absoluteY="490dp" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Se connecter"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/buttonmdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"/>
+
+    <Button
+        android:id="@+id/buttonmdp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Mot de passe oublié"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/buttonI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonC"/>
+
+    <Button
+        android:id="@+id/buttonI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Inscription"
+        android:textColor="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/buttonmdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

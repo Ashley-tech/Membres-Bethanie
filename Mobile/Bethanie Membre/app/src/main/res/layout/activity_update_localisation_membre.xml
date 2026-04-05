@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateLocalisationMembreActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textSize="30dp"
+        android:textColor="@color/red"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/update_local_info_intro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"/>
+
+    <TextView
+        android:id="@+id/update_local_info_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modification des coordonnées de localisation du membre "
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextAdress" />
+
+    <EditText
+        android:id="@+id/editTextAdress"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Adresse :"
+        app:layout_constraintBottom_toTopOf="@id/editTextAdressComp"
+        app:layout_constraintTop_toBottomOf="@id/update_local_info_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAdressComp"
+        android:layout_width="0dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Complément d'adresse :"
+        app:layout_constraintBottom_toTopOf="@id/editTextCP"
+        app:layout_constraintTop_toBottomOf="@id/editTextAdress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCP"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Code postal :"
+        app:layout_constraintBottom_toTopOf="@id/editTextVille"
+        app:layout_constraintTop_toBottomOf="@id/editTextAdressComp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextVille"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ville :"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextQuartier"
+        app:layout_constraintTop_toBottomOf="@id/editTextCP" />
+
+    <EditText
+        android:id="@+id/editTextQuartier"
+        android:layout_width="0dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        app:layout_constraintBottom_toTopOf="@id/editTextBoite"
+        app:layout_constraintTop_toBottomOf="@id/editTextVille"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Quartier de ville :" />
+
+    <EditText
+        android:id="@+id/editTextBoite"
+        android:layout_width="0dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Numéro de boîte/numéro d'appartement :"
+        app:layout_constraintBottom_toTopOf="@id/buttonupdateLocal"
+        app:layout_constraintTop_toBottomOf="@id/editTextQuartier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonupdateLocal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Modifier ces coordonnées de localisation"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/buttonretourlocalisa"
+        app:layout_constraintTop_toBottomOf="@id/editTextBoite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonretourlocalisa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonupdateLocal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

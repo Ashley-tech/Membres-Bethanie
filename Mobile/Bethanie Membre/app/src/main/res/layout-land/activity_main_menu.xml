@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/menu_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu principal de "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMembres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <Button
+        android:id="@+id/buttonMembres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Membres"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSupp"
+        app:layout_constraintEnd_toStartOf="@id/buttonInfo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Vos informations"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDeconnect"
+        app:layout_constraintEnd_toStartOf="@id/buttonHistorique"
+        app:layout_constraintStart_toEndOf="@id/buttonMembres"/>
+
+    <Button
+        android:id="@+id/buttonHistorique"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Votre historique"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDeconnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonInfo" />
+
+    <Button
+        android:id="@+id/buttonSupp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Supprimer votre compte"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDeconnect"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDeconnect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Se déconnecter"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonSupp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

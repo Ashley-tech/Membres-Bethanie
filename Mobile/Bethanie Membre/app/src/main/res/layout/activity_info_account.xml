@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoAccountActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/info_intro"/>
+
+    <TextView
+        android:id="@+id/info_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vos informations"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_text_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
+
+    <TextView
+        android:id="@+id/login_text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login : "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mdp_text"
+        app:layout_constraintTop_toBottomOf="@id/info_intro"/>
+
+    <TextView
+        android:id="@+id/mdp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe : "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/date_creation_text"
+        app:layout_constraintTop_toBottomOf="@id/login_text_info"/>
+
+    <TextView
+        android:id="@+id/date_creation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compte créé le "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profil_text"
+        app:layout_constraintTop_toBottomOf="@id/mdp_text"/>
+
+    <TextView
+        android:id="@+id/profil_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profil : "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonUpdateInfo"
+        app:layout_constraintTop_toBottomOf="@id/date_creation_text"/>
+
+    <Button
+        android:id="@+id/buttonUpdateInfo"
+        android:layout_width="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_height="wrap_content"
+        android:text="Modifier vos informations"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonretourinfo"
+        app:layout_constraintTop_toBottomOf="@id/profil_text"/>
+
+    <Button
+        android:id="@+id/buttonretourinfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Retour"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonUpdateInfo"
+        app:layout_constraintTop_toBottomOf="@id/profil_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

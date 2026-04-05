@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoHistoriqueActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EGLISE PROTESTANTE UNIE DE FRANCE \nGestion des membres"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/lbl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/when_text"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/when_text"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl"
+        app:layout_constraintBottom_toTopOf="@id/membre_txt"/>
+
+    <TextView
+        android:id="@+id/membre_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/when_text"
+        app:layout_constraintBottom_toTopOf="@id/buttonDeleteHistorique"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/buttonDeleteHistorique"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="Supprimer cette historique"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/buttonRetourInfoHistorique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/membre_txt" />
+
+    <Button
+        android:id="@+id/buttonRetourInfoHistorique"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:textColor="@color/blue"
+        app:backgroundTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDeleteHistorique" />
+</androidx.constraintlayout.widget.ConstraintLayout>
